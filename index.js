@@ -4,6 +4,7 @@
 
 function contact(event) {
     event.preventDefault();
+    console.log('Form submitted');
     const loading = document.querySelector('.modal__overlay--loading');
     const success = document.querySelector('.modal__overlay--success');
     loading.classList += " modal__overlay--visible";
@@ -17,10 +18,12 @@ function contact(event) {
         ).then(() => {
             loading.classList.remove('modal__overlay--visible');
             success.classList += ' modal__overlay--visible';
+            console.log('Email sent successfully');
         }).catch(() => {
             loading.classList.remove('modal__overlay--visible');
             alert(  
                 'The email service is temporarily unavailable. Please contact me directly via jazzlin.escovar@gmail.com'         
             );
+            console.log('EmailJS error:', error);
         })
 }
