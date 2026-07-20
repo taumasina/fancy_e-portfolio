@@ -41,7 +41,6 @@ function contact(event) {
         })
 }
 
-let isModalOpen = false;
 function toggleModal() {
     if (isModalOpen) {
         isModalOpen = false;
@@ -51,4 +50,7 @@ function toggleModal() {
     document.body.classList += " modal--open"
 }
 
-
+.catch((error) => {
+    loading.classList.remove('modal__overlay--visible');
+    console.log('EmailJS error:', error);
+});
