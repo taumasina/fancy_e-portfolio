@@ -2,6 +2,19 @@
 // Service ID: service_hk83pdf
 // Public Key: BWXvVQEVFv5LrP6AZ
 
+let isModalOpen = false;
+let contrastToggle = false;
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle;
+    if (contrastToggle) {
+        document.body.classList += " dark-theme"
+    }
+    else {
+       document.body.classList.remove("dark-theme") 
+    }
+}
+
 function contact(event) {
     event.preventDefault();
     console.log('Form submitted');
@@ -27,3 +40,15 @@ function contact(event) {
             console.log('EmailJS error:', error);
         })
 }
+
+let isModalOpen = false;
+function toggleModal() {
+    if (isModalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove("modal--open");
+    }
+    isModalOpen = !isModalOpen;
+    document.body.classList += " modal--open"
+}
+
+

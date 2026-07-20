@@ -17,6 +17,7 @@
       });
    })();
     </script>
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -40,14 +41,14 @@
             link__hover-effect--black
             ">Projects</a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
             nav__link--anchor
             link__hover-effect
             link__hover-effect--black
             ">Contact</a>
                 </li>
-                <li class="nav__link click">
+                <li class="nav__link click" onclick="toggleContrast()">
                     <a href="#" class="
             nav__link--anchor
             link__hover-effect
@@ -63,7 +64,7 @@
                 <p class="header__para">I'm a <b class="orange">Frontend Software Engineer</b> with a strong passion for
                     building web applications with great user experiences.
                     <br>
-                    Here's a bit more <b class="orange">about me</b>.
+                    Here's a bit more <b class="orange click" onclick="toggleModal()">about me</b>.
                 </p>
                 <div class="social__list">
                     <a href="#" class="social__link click">
@@ -78,7 +79,7 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fa-solid fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -148,8 +149,8 @@
                 <div class="modal__overlay modal__overlay--success">
                     Thanks for the message! I'll get back to you as soon as possible.
                 </div>
+                 <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
             </div>
-            <i class="fas fa-times modal__exit click"></i>
         </div>
     </section>
     <section id="projects">
